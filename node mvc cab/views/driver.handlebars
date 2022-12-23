@@ -1,0 +1,137 @@
+ <title>
+        driver registration
+    </title>
+</head>
+<link rel="stylesheet" href="reg.css">
+<body>
+ <style>
+    body{
+        background-image: url(https://images.pexels.com/photos/1808386/pexels-photo-1808386.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-size: cover;
+    }
+        table,
+        th {
+            border: 2px solid
+        }
+        .t1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 20px;
+            background-color: whitesmoke;
+            margin-top: 20px;
+            margin-left: 30vw;
+            height: 600px;
+            width: 500px;
+            
+   
+        }
+    </style>
+    <div class="t1 ">
+        <div class="r1 ">
+    <h2> DRIVER DETAILS</h2>
+    <table style="color: green;">
+    <form action="" method="post">
+            <tr>
+                
+            </tr>
+            <tr>
+                <td>
+                    <label for="title">TITLE</td>
+                        <td>
+                            <select>
+                                <option value="1">Mr.</option>
+                                <option value="2">Ms.</option>
+                                <option value="3">Mrs.</option>
+                            </select>
+                        </td>
+                        
+            </tr>
+            <tr>
+                <td>
+                    <label for="first name ">FIRST NAME</label>
+                </td>
+                <td>
+                    <input type="text" id="fname" name="fname" placeholder="your first name" required>
+                </td>
+            <tr>
+                <td>
+                    <label for="last name ">LAST NAME </label>
+                </td>
+                <td>
+                    <input type="text" id="lname" name="lname" placeholder="your last name" required>
+                </td>
+                <tr>
+                <td>
+                    <label for="exampleInputPassword1" class="form-label" style="color: green ;">PASSWORD</label>
+                   </td>
+                   <td>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" style="width: 13vw; " required minlength="5" maxlength="20">
+                </td></tr>
+        
+           
+                <td><label for="dob "> DATE of birth</label></td>
+                <td><input type="date" id="date" name="dob" placeholder="your date of birth" required></td>
+            <tr>
+                <td>
+                    <label for="ADDRESS">ADDRESS:</label>
+                </td>
+                <td><textarea id="ADDRESS" name="address" rows="6" cols="20" required></textarea></td>
+            </tr>
+        
+                <tr>
+                    <td><label for="license number">LICENSE NO</label></td>
+                    <td><input type="number" id="number" name="lcno" required></td>
+                <tr>
+
+            <tr>
+                <td><label for="email ">email</label>:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            <tr>
+            <tr>
+                <td> <label for="contact">can we contact you?</label></td>
+                <td>
+                    <input type="radio" id="yes" name="contact" value="1"/>yes
+                    <input type="radio" id="no" name="contact" value="2"/>no
+                    </tr>
+            <tr>
+                <td> <label for="communication">communication preference</label></td>
+                <td>
+                    <input type="radio" id="cok" name="hok" value="1"/>sms
+                   <input type="radio" id="tact" name="hok" value="2"/>mail</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ,align ="center"><input type="checkbox" id="tandc" name="tandc" value="1" required> I agree to the <a href="tandc.html" target="_blank" required>Terms and conditions</a></td>
+                    </tr>
+       
+            
+            
+        </table>
+        <br>
+        <tr>
+            <td>
+                <input type="reset" id="reset" name="reset" style="margin-left:-20px ;">
+            </td>
+            <td>
+                <input type="submit" id="submit" onclick="savedata()" name="submit " style="margin-left:70px ;">
+            </td>
+        </tr> 
+    </form>
+    </div>
+    <button type="submit">HOME</button>
+</div>
+                <!-- <script>
+                function savedata(){
+                    // debugger
+                    var fname=document.getElementById('fname').value;
+                    var lname=document.getElementById('lname').value;
+                    var address=document.getElementById('ADDRESS').value;
+                    alert('..'+fname);
+                    localStorage.setItem('fname',fname);
+                    localStorage.setItem('lname',lname);
+                    localStorage.setItem('address',address);
+                }
+            
+            </script> -->

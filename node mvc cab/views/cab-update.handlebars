@@ -1,0 +1,81 @@
+ 
+ 
+ <style>
+     body {
+        background-image: url('https://images.pexels.com/photos/221304/pexels-photo-221304.jpeg?auto=compress&cs=tinysrgb&w=600');
+        background-size: cover;
+    }
+
+.container{
+    padding-left: 30%;
+    padding-top:5%;
+}
+    table,
+    th,
+    td {
+        border: 0px;
+        padding: 5px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        background-color: white;
+    }
+ </style>
+
+ <center>
+    <h1 class="text-center">NEW CAB</h1>
+<a href="/cab" class="btn btn-primary">For new cab user </a>
+ </center>
+ <div class="container">
+ <table>
+     <form method="post">
+
+    <tr>
+        <td>
+            <label for="cab">CABNO</label>
+        </td>
+
+        <td>
+          <input type="text" name="cabno" id="cab" class="form-control"  style="width: 20vw; padding: 5px;" values="{{data.dataValues.Cabno}}">
+        </td>
+    </tr>
+
+
+     <tr>
+        <td>
+            <label for="model">CABMODEL</label>
+        </td>
+        <td>
+
+         <input type="text" name="cabmodel" id="model" class="form-control"  style="width: 20vw; padding: 5px;"values="{{data.dataValues.Cabmodel}}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="cap">CABCAPACITY</label>
+        </td>
+        <td>
+            <input type="text" name="cabcapacity" id="cab" class="form-control" style="width: 20vw; padding: 5px;" values="{{data.dataValues.Cabcapacity}}">
+        </td>
+
+        <tr>
+            <tr>
+        <td>
+            <label for="model">CABDESCRIPTION</label>
+        </td>
+        <td>
+
+         <input type="text" name="cabdescription" id="description" class="form-control"  style="width: 20vw; padding: 5px;" values ="{{data.dataValues.Cabdescription}}">
+        </td>
+    </tr>
+            </table>
+            <br>
+            <div class="d-grid mt-2">
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    {{#if message}}
+                    <p class="text-danger">{{message}}</p>
+                    {{/if}}
+                </div>
+                </form>
+    </div>
+
+    

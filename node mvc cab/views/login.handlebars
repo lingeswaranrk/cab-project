@@ -1,0 +1,143 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box1 {
+
+        height: auto;
+        width: auto;
+        overflow: hidden;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .nav {
+        position: absolute;
+        display: flex;
+    }
+
+    .manual-btn {
+        border: 2px solid;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .manual-btn:hover {
+        background: blanchedalmond
+    }
+
+    #radio1:checked~.first {
+        margin-left: 0;
+    }
+
+    #radio2:checked~.first {
+        margin-left: 40%;
+    }
+
+    #radio3:checked~.first {
+        margin-left: 70%;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        width: 550px;
+        padding-left: 200px;
+        padding-top: 150px;
+        
+        background-size: cover;
+
+    }
+     #myvideo{
+        width:100vw;
+        height:100vh;
+        object-fit: cover;
+    position: fixed;
+    right:0;
+     bottom:0;
+     z-index: -1;
+
+    }
+</style>
+ <video autoplay loop muted id="myvideo">
+        <source src="static/pexels-tim-samuel-5834557.mp4" type="video/mp4">
+    </video>
+<div class="container">
+    <div class="box1">
+        {{!-- <div class="slides">
+
+
+
+
+            <img src="https://images.pexels.com/photos/4606334/pexels-photo-4606334.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/5835468/pexels-photo-5835468.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/5835256/pexels-photo-5835256.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="">
+        </div>
+
+
+    </div> --}}
+
+
+    <div class="box" style="color: yellow;">
+        <h1 class="text-center" > LOGIN</h1>
+        <form method="post">
+            <table>
+
+
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="mail@123.com"
+                            style="width: 20vw; padding: 5px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="pass@!23"
+                            style="width: 20vw; padding: 5px;">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <div class="d-flex">
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                {{#if message}}
+                <p class="text-danger">{{message}}</p>
+                {{/if}}
+            </div>
+        </form>
+        
+</div>
+
+

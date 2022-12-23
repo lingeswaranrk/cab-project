@@ -1,0 +1,43 @@
+<style>
+     table,
+    th,
+    td {
+        border: 0px;
+        padding: 10px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        background-color:white;
+    }
+</style>
+
+<h1 class="text-center">CAB DETAILS</h1>
+<div class="container">
+    <a href="/type" class="btn btn-primary"> for update </a>
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Id</th>
+            <th>CABNO</th>
+            <th>CABMODEL</th>
+            <th>CABCAPACITY</th>
+            <th>CABDESCRIPTION</th>
+            <th>ACTION</th>
+            
+           
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.id}}</td>
+            <td>{{this.dataValues.Cabno}}</td>
+            <td>{{this.dataValues.Cabmodel}}</td>
+            <td>{{this.dataValues.Cabcapacity}}</td>
+            <td>{{this.dataValues.Cabdescription}}</td>
+            
+          
+            <td>
+                <a href="/up/{{this.dataValues.id}}">Edit</a> |
+                <a href="/delete2/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
